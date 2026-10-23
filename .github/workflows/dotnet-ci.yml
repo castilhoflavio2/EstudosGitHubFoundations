@@ -29,13 +29,13 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      # 3. Restaura as dependências dos pacotes NuGet
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: ./GitHubFoundationsApi
 
-      # 4. Compila o projeto em modo Release (faz o build)
       - name: Build application
         run: dotnet build --no-restore --configuration Release
+        working-directory: ./GitHubFoundationsApi
 
       # 5. (Opcional) Executa os testes unitários, se você os tiver
       - name: Run tests
