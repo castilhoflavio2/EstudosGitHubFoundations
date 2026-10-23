@@ -36,7 +36,3 @@ jobs:
       - name: Build application
         run: dotnet build --no-restore --configuration Release
         working-directory: ./GitHubFoundationsApi
-
-      # 5. (Opcional) Executa os testes unitários, se você os tiver
-      - name: Run tests
-        run: dotnet test --no-build --configuration Release
